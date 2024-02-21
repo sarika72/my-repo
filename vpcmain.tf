@@ -1,10 +1,10 @@
 provider "aws" {
-	profile = "admin" 
+	region = "us-east-2" 
 }
 
 
 module "terraform_my_module" {
- source             = "./vpc"
+ source             = "./module/vpc"
  vpc_cidr_block     = var.vpc_cidr_block
  project	        = var.project
  public_cidr_block  = var.public_cidr_block
